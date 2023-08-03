@@ -6,6 +6,7 @@ int main()
 	// pierwszy program :)
 	cout << "Witamy na pokladzie";
 
+
 	//drugi program
 
 }
