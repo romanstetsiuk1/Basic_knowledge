@@ -53,7 +53,7 @@ int main()
 
 	cout << "Masz " << punkty_karne << " punktow karnych.\n";
 	if (punkty_karne) cout << "Popraw sie!\n\n";
-*/
+
 
 	// Petla while
 	int ile;
@@ -65,5 +65,15 @@ int main()
 		ile = ile - 1;
 	}
 	cout << "\nWartosc ile wynosi: " << ile;
+*/
+
+	// Petla do while
+	char litera;
+	do {
+		cout << "Napisz jakas litere: ";
+		cin >> litera;
+		cout << "\nNapisales: " << litera << "\n";
+	} while (litera != 'K');
+	cout << "\nSkoro napisales litere K to konczymy!\n";
 
 }
