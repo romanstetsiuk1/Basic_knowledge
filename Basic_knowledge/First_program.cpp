@@ -65,7 +65,7 @@ int main()
 		ile = ile - 1;
 	}
 	cout << "\nWartosc ile wynosi: " << ile;
-*/
+
 
 	// Petla do while
 	char litera;
@@ -75,5 +75,17 @@ int main()
 		cout << "\nNapisales: " << litera << "\n";
 	} while (litera != 'K');
 	cout << "\nSkoro napisales litere K to konczymy!\n";
+*/
+
+	// Petla for
+	cout << "Stewardzie, ilu leci pasazerow ? \n";
+	int ile;			// liczba pasazerow
+	cin >> ile;
+
+	int i;				// licznik obiegow petli
+	for (i = 1; i <= ile; i++) {
+		cout << "Pasazer nr " << i << " prosze zapiac pasy!\n";
+	}
+	cout << "Skoro wszyscy juz zapieli, to ladujemy!";
 
 }
