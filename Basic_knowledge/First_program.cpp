@@ -34,7 +34,7 @@ int main()
 
 	cout << "\n" << cale << " cale to jest: " << cantymetry << " cantymetrow.\n\n";
 
-	*/
+	
 	// -- Rozdzial II. Instrukcje warunkowe. --
 	// Instrukcaja warunkowa IF
 	int wys, punkty_karne;		// zmienne tego samego typu mozna wpisywac przez przecinek
@@ -53,6 +53,17 @@ int main()
 
 	cout << "Masz " << punkty_karne << " punktow karnych.\n";
 	if (punkty_karne) cout << "Popraw sie!\n\n";
+*/
 
+	// Petla while
+	int ile;
+	cout << "Ile gwizdek ma miec kapitan?: ";
+	cin >> ile;
+	cout << "\nNo to narysujmy wszystkie " << ile << ";\n";
+	while (ile) {		// petla while rysuje gwiazdki
+		cout << "* ";
+		ile = ile - 1;
+	}
+	cout << "\nWartosc ile wynosi: " << ile;
 
 }
