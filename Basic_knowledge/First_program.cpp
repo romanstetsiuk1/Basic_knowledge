@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <string>
 using namespace std;
 
 int main()
@@ -75,7 +77,7 @@ int main()
 		cout << "\nNapisales: " << litera << "\n";
 	} while (litera != 'K');
 	cout << "\nSkoro napisales litere K to konczymy!\n";
-*/
+
 
 	// Petla for
 	cout << "Stewardzie, ilu leci pasazerow ? \n";
@@ -87,5 +89,40 @@ int main()
 		cout << "Pasazer nr " << i << " prosze zapiac pasy!\n";
 	}
 	cout << "Skoro wszyscy juz zapieli, to ladujemy!";
+*/
+
+	// Zakresowe for
+	vector<double> liczby {3.14, 4.4, -6.6, 7.7};
+	for (auto elem : liczby) {			// petla for po wszystkim elementam vectora
+		cout << elem << ", ";
+	}
+	for (auto& k : liczby) {
+		k = k * 10;
+	}
+	cout << "\nPo mnozeniu *10: ";
+	for (auto elem : liczby) cout << elem << ", ";
+	cout << endl;
+
+	string przyslowie{ "Przyszla koza do woza." };	// Obiekt typu string to tez pojemnik na znaki
+	cout << "Skakanie po kolejnych znakach stringu:\n";
+	for (auto znak : przyslowie) {
+		cout << "-" << znak;
+	}
+	cout << endl;
+
+	cout << "Pojemnikiem tez jest tresc {...}\n";
+	for(auto x:{6,9,3,8,4,7,5,6}){
+		cout << x << ", ";
+	}
+	cout << endl;
+
+	cout << "Zakresowe for potrafi obliczyc tez tabeli.\n";		// Tabela
+	int tablica[]{ 100,200,300,50 };
+	for (auto& n : tablica) {
+		cout << n << ", ";
+		n++;
+	}
+	cout << "\nEfekt po inkrementacji:\n";
+	for (auto n : tablica) cout << n << ", ";
 
 }
