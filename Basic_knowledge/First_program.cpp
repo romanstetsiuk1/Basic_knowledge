@@ -125,4 +125,6 @@ int main()
 	cout << "\nEfekt po inkrementacji:\n";
 	for (auto n : tablica) cout << n << ", ";
 
+
+
 }
