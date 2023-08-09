@@ -89,14 +89,14 @@ int main()
 		cout << "Pasazer nr " << i << " prosze zapiac pasy!\n";
 	}
 	cout << "Skoro wszyscy juz zapieli, to ladujemy!";
-*/
+
 
 	// Zakresowe for
 	vector<double> liczby {3.14, 4.4, -6.6, 7.7};
 	for (auto elem : liczby) {			// petla for po wszystkim elementam vectora
 		cout << elem << ", ";
 	}
-	for (auto& k : liczby) {
+	for (auto& k : liczby) {		// znak & uzywamy w celu dostania sie do oryginalu elementu przez referencje w celu jego zmodyfikowania
 		k = k * 10;
 	}
 	cout << "\nPo mnozeniu *10: ";
@@ -124,6 +124,27 @@ int main()
 	}
 	cout << "\nEfekt po inkrementacji:\n";
 	for (auto n : tablica) cout << n << ", ";
+*/
+
+	// Instrukcja switch
+	cout << "Kapitanie, ktory podzespol sprawdzic?\n" << "nr 10 - Silnik\nnr 35 - Stery\nnr 28 - radar\n"
+		<< "Podaj, kapitanie, numer: ";
+	int ktory;
+	cin >> ktory;
+	switch (ktory) {
+	case 10:
+		cout << "Sprawdzamy silnik!\n";
+		break;
+	case 28:
+		cout << "Sprawdzamy radar!\n";
+		break;
+	case 35:
+		cout << "Sprawdzamy stery!\n";
+		break;
+	default: 
+		cout << "Zakrez nr - " << ktory << ": nie znam takiego.";
+		break;
+	}
 
 
 
