@@ -124,7 +124,7 @@ int main()
 	}
 	cout << "\nEfekt po inkrementacji:\n";
 	for (auto n : tablica) cout << n << ", ";
-*/
+
 
 	// Instrukcja switch
 	cout << "Kapitanie, ktory podzespol sprawdzic?\n" << "nr 10 - Silnik\nnr 35 - Stery\nnr 28 - radar\n"
@@ -132,7 +132,7 @@ int main()
 	int ktory;
 	cin >> ktory;
 	switch (ktory) {
-	case 10:
+	case 10:			// zapis 'case wartosc' nazywa siê 'etykieta case'
 		cout << "Sprawdzamy silnik!\n";
 		break;
 	case 28:
@@ -145,6 +145,31 @@ int main()
 		cout << "Zakrez nr - " << ktory << ": nie znam takiego.";
 		break;
 	}
+*/
+
+
+	// Instrukcja break - powoduje natychmiastowe przerywanie dzialania petli
+		// break w petli while:
+	int i = 7;
+	while (1)	// petla nieskonczona
+	{
+		cout << "Petla, i = " << i << "\n";
+		i = i - 1;
+		if (i < 5) {
+			cout << "Przerywamy te petle!";
+			break;
+		}
+	}
+		// przyklad z zagniezdzonymi petlami
+	int zakoncz = 3;
+	for (int i = 0; i < 4; i = i + 1) {
+		for (int m = 0; m < 10; m = m + 1) {
+			cout << "*";
+			if (m > zakoncz)break;		// tu wyskok z for (m..)
+		}
+		cout << "\nKontynujemy zetnetrzna petle" << " for dla i = " << i << "\n";
+	}
+
 
 
 
