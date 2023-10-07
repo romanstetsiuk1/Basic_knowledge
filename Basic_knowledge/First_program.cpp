@@ -145,7 +145,7 @@ int main()
 		cout << "Zakrez nr - " << ktory << ": nie znam takiego.";
 		break;
 	}
-*/
+
 
 
 	// Instrukcja break - powoduje natychmiastowe przerywanie dzialania petli
@@ -169,8 +169,28 @@ int main()
 		}
 		cout << "\nKontynujemy zetnetrzna petle" << " for dla i = " << i << "\n";
 	}
+*/
 
 
+	// Instrukcja goto
+		// niezalecane uzycie instrukcji goto:
+	cout << "Cos piszemy \n";
+	goto aaa;
+	cout << "Ta instrukcja zostaje przeskoczona.";
+		aaa:
+	cout << "Piszemy dalej.\n\n";
+		// goto mozna wykorzystac dla natychmiastowego opuszczenia wielokrotnie zagnizdzonych petli lub instr. switch
+	int m=1, i=1, k;
+	while (m < 500) {
+		while (i < 20) {
+			for (k = 16; k < 100; k = k + 4) {
+				// tu wyskakuje blad:
+				if(1==1) goto po_petli;
+			}
+		}
+	}
+po_petli:
+	cout << "Po opuszczeniu wszystkich petli.";
 
 
 }
