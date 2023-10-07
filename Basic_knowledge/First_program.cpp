@@ -169,7 +169,7 @@ int main()
 		}
 		cout << "\nKontynujemy zetnetrzna petle" << " for dla i = " << i << "\n";
 	}
-*/
+
 
 
 	// Instrukcja goto
@@ -191,6 +191,19 @@ int main()
 	}
 po_petli:
 	cout << "Po opuszczeniu wszystkich petli.";
+*/
+
+
+	// Instrukcja continue - przydaje sie wewnatrz petli for,while, do..while. Powoduje zaniechanie wykonywania instrukcji
+	for (int k = 0; k < 12; k++) {
+		cout << "A";
+		if (k > 1)continue;
+		cout << "b\n";
+	}
+
+
+
+
 
 
 }
