@@ -1,7 +1,26 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <limits>	// ta klase potrzebujemy zeby korzystac z podgladu wlasciwosci poszczegolnych typow
+#include <iomanip>
 using namespace std;
+
+/*
+// Typy fundamentalne. Dany program wyswietla informacje o typach danych. (1/2 czesc)
+template<typename T>
+void info_o_typie(string opis) {
+	cout << setw(18)
+		<< opis << ":"
+		<< setw(2) << sizeof(T)
+		<< "|"
+		<< setw(2)
+		<< numeric_limits<T>::digits		// Bit znaku sie w to nie wlicza
+		<< (numeric_limits<T>::is_signet ? "|zn|" : "|bz|")		// Ma? Czy nie ma znaku?
+		<< "[" << numeric_limits<T>::min()
+		<< ", " << numeric_limits<T>::max()
+		<< "]" << endl;
+}
+*/
 
 int main()
 {
@@ -191,7 +210,7 @@ int main()
 	}
 po_petli:
 	cout << "Po opuszczeniu wszystkich petli.";
-*/
+
 
 
 	// Instrukcja continue - przydaje sie wewnatrz petli for,while, do..while. Powoduje zaniechanie wykonywania instrukcji
@@ -203,6 +222,52 @@ po_petli:
 
 
 
+// Typy fundamentalne. Dany program wyswietla informacje o typach danych. (2/2 czesc)
+	cout << "int: "
+	<< numeric_limits<int>::digits
+	<< "bitow, "
+	<< (numeric_limits<int>::is_signed ? "znak" : "b/zn")
+	<< " bajtow: "
+	<< sizeof(int)
+	<< " [" << numeric_limits<int>::min()
+	<< " ," << numeric_limits<int>::max()
+	<< "]" << endl;
+
+	cout << "Informacje o typie przechowujacym znaki" << endl;
+
+	cout << "         char: "
+	<< sizeof(char) << "|"
+	<< numeric_limits<char>::digits
+	<< (numeric_limits<char>::is_signed ? "|zn|" : "|bz|")
+	<< " [" << (int)numeric_limits<char>::min()
+	<< ", " << (int)numeric_limits<char>::max()
+	<< "]" << endl;
+
+	cout << "\nWypisanie za pomoca szablonu funkcji:" << endl;
+
+	info_o_typie<short int>("short int");
+	info_o_typie<signed short int>("signed short int");
+	info_o_typie<unsigned short int>("unsigned short int");
+	info_o_typie<int>("int");
+	info_o_typie<signed int>("signed int");
+	info_o_typie<unsigned int>("unsigned int");
+
+	cout << endl;
+
+	info_o_typie<long int>("long int");
+	info_o_typie<signed long>("signed long");
+	info_o_typie<unsigned long>("unsigned long");
+
+	cout << endl;
+	info_o_typie<long long int>("long long int");
+	info_o_typie<signed long long>("signed long long");
+	info_o_typie<unsigned long long>("unsigned long long");
+
+	cout << endl;
+	info_o_typie<float>("float");
+	info_o_typie<double>("double");
+	info_o_typie<long double>("long double");
+*/
 
 
 
