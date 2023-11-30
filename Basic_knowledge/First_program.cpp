@@ -284,7 +284,7 @@ po_petli:
 	cout << "Suma m + n + j = " << (m + n + j) << "\n";
 	cout << "Wypisujemy trzy rozne stale: "
 		<< 0x22 << ", " << 022 << ", " << 22 << "\n";
-*/
+
 
 
 // Uzycia zmiennoprzycinkowych stalych
@@ -295,8 +295,26 @@ po_petli:
 	promien = 4.1e2;
 	pole = promien * promien * 3.14;
 	cout << "\nPole kola o promieniu " << promien << " wynosi " << pole;
+*/
 
 
+
+// Ciekawostka - stala 'nullptr' jest wykorzystywana dla zerowanie/odlozenia wskaznika
+
+// Surowe stale tekstowe
+	cout << "Lecimy promem \"Columbia\", tu \\ bekslesz" << endl;
+	cout << R"(Lecimy promem "Columbia", tu \ bekslesz)" << endl;
+
+	cout << "C:\\transport\\nowy_project\\project1" << endl;
+	cout<<R"(C:\transport\nowy_project\project1)" << endl;
+
+	// gdy konieczne jest uzycie znaku nowej linii
+	cout << "Linia pierwsza\nlinia druga\n" << endl;
+	cout << R"(Linia raw pierwsza
+linia raw druga)" << endl;
+	// a gdy w tekscie ma wyst¹piæ )" zmieniamy ogranicznik na odpowiedniejszy
+	cout << R"ogranicznik(Zawisza "(Czarny)" zawolal)ogranicznik" << endl;
+	cout << R"##(Boleslaw "(Krzywousty)" wszedl do komnaty)##" << endl;
 
 
 
