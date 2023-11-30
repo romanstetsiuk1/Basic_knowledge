@@ -270,5 +270,21 @@ po_petli:
 */
 
 
+// Zapis zmiennych w systemie dziesiatkowym, szesnastkowym, osemkowym i dwojkowym (C++ 14)
+	int i = 5;
+	int k = i + 011;	// czyli: i + 9
+	cout << "k= " << k << endl;
+
+	int m = 100;		// stala doslowna w zapisie dziesiatkowym
+	int n = 0x100;		// stala doslowna w zapisie szesnastkowym
+	int j = 0100;		// stala doslowna w zapisie osemkowym
+	int bin = 0b100;	// stala doslowna w zapisie dwojkowym (C++ 14)
+	cout << "Wypisanie ich w postaci dziesiatkowej \n m = " << m
+		<< ", n = " << n << ", j = " << j << ", bin = " << bin << endl;
+	cout << "Suma m + n + j = " << (m + n + j) << "\n";
+	cout << "Wypisujemy trzy rozne stale: "
+		<< 0x22 << ", " << 022 << ", " << 22 << "\n";
+
+
 
 }
