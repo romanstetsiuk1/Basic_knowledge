@@ -267,7 +267,7 @@ po_petli:
 	info_o_typie<float>("float");
 	info_o_typie<double>("double");
 	info_o_typie<long double>("long double");
-*/
+
 
 
 // Zapis zmiennych w systemie dziesiatkowym, szesnastkowym, osemkowym i dwojkowym (C++ 14)
@@ -284,6 +284,20 @@ po_petli:
 	cout << "Suma m + n + j = " << (m + n + j) << "\n";
 	cout << "Wypisujemy trzy rozne stale: "
 		<< 0x22 << ", " << 022 << ", " << 22 << "\n";
+*/
+
+
+// Uzycia zmiennoprzycinkowych stalych
+	double promien = 1.7;
+	double pole = promien * promien * 3.14;
+	cout << "\nPole kola o promieniu " << promien << " wynosi " << pole;
+
+	promien = 4.1e2;
+	pole = promien * promien * 3.14;
+	cout << "\nPole kola o promieniu " << promien << " wynosi " << pole;
+
+
+
 
 
 
