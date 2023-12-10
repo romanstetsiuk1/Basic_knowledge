@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="First_program.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="OM_1_Startujemy.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
